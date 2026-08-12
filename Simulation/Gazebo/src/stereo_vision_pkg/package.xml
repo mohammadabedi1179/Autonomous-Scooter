@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>stereo_vision_pkg</name>
+  <version>0.1.0</version>
+  <description>
+    Stereo vision pipeline for Raspberry Pi + IMX219-83:
+    TCP frame receiver, stereo rectification + disparity,
+    YOLO detection, and Kalman-filtered depth estimation.
+  </description>
+  <maintainer email="you@example.com">Your Name</maintainer>
+  <license>MIT</license>
+
+  <depend>rclpy</depend>
+  <depend>sensor_msgs</depend>
+  <depend>stereo_msgs</depend>
+  <depend>vision_msgs</depend>
+  <depend>std_msgs</depend>
+  <depend>cv_bridge</depend>
+  <depend>message_filters</depend>
+
+  <test_depend>ament_pep8</test_depend>
+  <test_depend>ament_copyright</test_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

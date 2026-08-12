@@ -1,0 +1,38 @@
+{
+  "fixed_dim": 15,
+  "max_obstacles": 10,
+  "obstacle_feature_dim": 5,
+  "lstm_hidden": 64,
+  "lstm_layers": 1,
+  "net_arch": [
+    256,
+    256
+  ],
+  "dt": 0.1,
+  "v_max": 1.0,
+  "w_max": 1.0,
+  "smooth_alpha": 0.7,
+  "GOAL_DIST_MAX": 15.0,
+  "OBS_COORD_MAX": 10.0,
+  "VEL_MAX": 2.0,
+  "max_obstacle_depth": 10.0,
+  "ultra_max_range": 1.0,
+  "obstacle_collision_radius": 0.7,
+  "ultra_collision_radius": 0.2,
+  "success_radius": 1.5,
+  "shield_enabled": true,
+  "shield_mode": "passive",
+  "shield_passive_levels": [
+    "caution",
+    "danger"
+  ],
+  "shield_critical_dist": 0.25,
+  "shield_danger_dist": 0.5,
+  "shield_caution_dist": 0.8,
+  "shield_obs_critical": 0.9,
+  "shield_obs_danger": 1.5,
+  "shield_obs_caution": 2.5,
+  "shield_caution_max_v": 0.4,
+  "shield_danger_max_v": 0.1,
+  "shield_danger_steer_bias": 0.5
+}

@@ -1,0 +1,63 @@
+# config/pipeline_params.yaml
+# Edit paths and tune parameters here — no need to touch the source files.
+
+pi_camera_receiver:
+  ros__parameters:
+    host: "0.0.0.0"
+    port: 8000
+    frame_id: "camera"
+    encoding: "bgr8"
+
+stereo_disparity_node:
+  ros__parameters:
+    calib_json: "/home/mohammadabedi/Documents/Autonomous\ Scooter/Calibration/calibration_data_real_camera_640_480/stereo_calibration_params.json"   # <-- set your path
+    left_topic:  "/follower_robot/depth_cam/left/image_rect"
+    right_topic: "/follower_robot/depth_cam/right/image_rect"
+    out_topic:   "/follower_robot/depth_cam/disparity"
+    sync_slop:   0.12
+    sync_queue:  10
+    min_disp:    0
+    num_disp:    128    # must be divisible by 16; lower = faster, less range
+    block_size:  9      # odd, 3-11
+    max_hz:      0.0    # 0 = unlimited
+
+yolo_stereo_detector:
+  ros__parameters:
+    model_name:     "yolo11n.pt"
+    imgsz:          640
+    conf_th:        0.25
+    max_hz:         10.0
+    use_left:       true
+    use_right:      false
+    tracker_config: "botsort.yaml"
+    track:          true
+    allowed_classes: []
+    left_topic:  "/follower_robot/depth_cam/left/image_rect"
+    right_topic: "/follower_robot/depth_cam/right/image_rect"
+    left_out:    "/follower_robot/depth_cam/left/detections"
+    right_out:   "/follower_robot/depth_cam/right/detections"
+
+stereo_depth_kalman:
+  ros__parameters:
+    calib_json: "/home/user/stereo_calibration_params.json"   # <-- set your path
+    detections_topic: "/follower_robot/depth_cam/left/detections"
+    disparity_topic:  "/follower_robot/depth_cam/disparity"
+    out_topic:        "/follower_robot/obstacles_depth"
+    sync_queue:  10
+    sync_slop:   0.12
+    conf_thresh:       0.35
+    min_disparity:     3.0
+    depth_min:         0.3
+    depth_max:         50.0
+    roi_shrink:        0.2
+    min_valid_ratio:   0.05
+    min_valid_floor:   10
+    buffer_len:        20
+    kf_q_pos:          0.05
+    kf_q_vel:          0.50
+    kf_r_xy:           0.30
+    object_expiration_s: 5.0
+    key_bin_px:        40
+    max_process_hz:    0.0
+    class_allowlist:   []
+    print_json:        true

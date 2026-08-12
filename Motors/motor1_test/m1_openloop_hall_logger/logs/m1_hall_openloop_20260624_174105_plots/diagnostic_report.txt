@@ -1,0 +1,31 @@
+M1 open-loop Hall/RPM diagnostic report
+==============================================
+Loaded from CSV: m1_hall_openloop_20260624_174105.csv
+Rows analyzed: 1246
+
+PWM levels analyzed: 20, 30, 40, 50, 60
+Total valid pulses: 2249
+Total rejected pulses: 0 (0.00% of valid+rejected)
+Worst RPM coefficient of variation: 23.64%
+Worst dropout percentage: 5.00%
+Spike candidates: 61
+Max pulse age: 61.7 ms
+
+Per-PWM settled summary:
+  PWM    20: median=25.94 rpm, mean=24.71, std=5.80, p2p=32.36, CV=23.49%, rejects=0.00%, dropouts=3.89%, spikes=8
+  PWM    30: median=47.65 rpm, mean=46.29, std=8.59, p2p=56.71, CV=18.56%, rejects=0.00%, dropouts=3.33%, spikes=12
+  PWM    40: median=67.05 rpm, mean=65.34, std=12.80, p2p=78.47, CV=19.58%, rejects=0.00%, dropouts=3.33%, spikes=12
+  PWM    50: median=86.27 rpm, mean=82.49, std=19.50, p2p=100.04, CV=23.64%, rejects=0.00%, dropouts=5.00%, spikes=17
+  PWM    60: median=105.16 rpm, mean=101.23, std=22.60, p2p=120.86, CV=22.32%, rejects=0.00%, dropouts=4.44%, spikes=12
+
+Interpretation:
+  - Dropouts/stale-pulse periods occurred while PWM was nonzero. Hall measurement is unreliable.
+  - Sudden RPM spike candidates were detected. This usually comes from false pulse timing or RPM calculation artifacts.
+  - Fixed-PWM RPM variation is high. This may be measurement noise or actual speed instability.
+  - Do not tune PID yet. First clean or validate the Hall/RPM measurement.
+
+Most useful plots:
+  - 02_rpm_raw_valid_filtered.png
+  - 04_pulse_counts_delta.png
+  - 06_rejected_pulses.png
+  - 10_rpm_boxplot_by_pwm.png

@@ -1,0 +1,29 @@
+M1 open-loop window RPM diagnostic report
+================================================
+Loaded from CSV: m1_window_rpm_20260624_183437.csv
+Rows analyzed: 1261
+
+PWM levels analyzed: 20, 30, 40, 50, 60
+Worst filtered-window RPM CV: 7.74%
+Worst period RPM CV: 11.75%
+Worst filtered-window dropout percentage: 0.00%
+Worst period dropout percentage: 0.56%
+Total rejected pulses: 0
+
+Per-PWM settled summary:
+  PWM  20: window_median=25.16 rpm, window_mean=24.73, window_std=1.91, window_CV=7.74%, window_dropouts=0.00%, period_CV=11.75%, period_dropouts=0.00%
+  PWM  30: window_median=46.90 rpm, window_mean=46.22, window_std=1.56, window_CV=3.37%, window_dropouts=0.00%, period_CV=7.19%, period_dropouts=0.00%
+  PWM  40: window_median=65.72 rpm, window_mean=65.34, window_std=2.17, window_CV=3.32%, window_dropouts=0.00%, period_CV=6.37%, period_dropouts=0.56%
+  PWM  50: window_median=84.90 rpm, window_mean=84.19, window_std=3.26, window_CV=3.87%, window_dropouts=0.00%, period_CV=5.40%, period_dropouts=0.00%
+  PWM  60: window_median=103.99 rpm, window_mean=102.60, window_std=5.13, window_CV=5.00%, window_dropouts=0.00%, period_CV=4.85%, period_dropouts=0.00%
+
+Interpretation:
+  - Filtered window RPM has few/no dropouts during settled PWM.
+  - Window RPM stability is reasonably good for low-speed open-loop testing.
+  - Do not tune PID until filtered-window RPM looks smooth enough at fixed PWM.
+
+Most useful plots:
+  - 02_period_vs_window_rpm.png
+  - 03_window_rpm_moving_only.png
+  - 04_window_pulse_counts.png
+  - 08_window_boxplot_by_pwm.png

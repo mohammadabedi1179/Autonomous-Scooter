@@ -1,0 +1,51 @@
+Keyboard signed-wheel drive log report
+================================================
+Rows analyzed: 362
+
+Sign convention:
+  Forward command: M0 +, M1 -, M2 +, M3 -
+  Backward command: M0 -, M1 +, M2 -, M3 +
+
+Important:
+  Hall RPM may be direction-blind, so reverse direction must be visually confirmed.
+
+Command summary:
+  cmd  -60 rpm: median mean |RPM|=54.0, median spread=2.3, median |PWM|=44.5, L-R=-0.1 rpm
+  cmd  -55 rpm: median mean |RPM|=31.8, median spread=2.4, median |PWM|=37.5, L-R=+0.6 rpm
+  cmd  -50 rpm: median mean |RPM|=27.4, median spread=3.6, median |PWM|=34.6, L-R=+0.9 rpm
+  cmd  -45 rpm: median mean |RPM|=26.7, median spread=3.2, median |PWM|=31.6, L-R=+1.1 rpm
+  cmd  -40 rpm: median mean |RPM|=26.2, median spread=2.2, median |PWM|=27.2, L-R=+0.8 rpm
+  cmd  -35 rpm: median mean |RPM|=21.8, median spread=3.7, median |PWM|=25.7, L-R=+0.9 rpm
+  cmd  -30 rpm: median mean |RPM|=7.7, median spread=3.1, median |PWM|=19.9, L-R=-0.4 rpm
+  cmd  -25 rpm: median mean |RPM|=5.0, median spread=7.0, median |PWM|=14.2, L-R=+3.0 rpm
+  cmd  -20 rpm: median mean |RPM|=4.5, median spread=7.6, median |PWM|=8.9, L-R=+1.8 rpm
+  cmd  -15 rpm: median mean |RPM|=3.8, median spread=8.1, median |PWM|=4.9, L-R=+0.4 rpm
+  cmd  -10 rpm: median mean |RPM|=6.2, median spread=8.8, median |PWM|=1.5, L-R=+4.7 rpm
+  cmd   -5 rpm: median mean |RPM|=10.6, median spread=3.7, median |PWM|=0.3, L-R=+2.4 rpm
+  cmd   +5 rpm: median mean |RPM|=5.0, median spread=6.7, median |PWM|=2.3, L-R=+3.3 rpm
+  cmd  +10 rpm: median mean |RPM|=5.9, median spread=8.2, median |PWM|=6.5, L-R=+3.6 rpm
+  cmd  +15 rpm: median mean |RPM|=5.8, median spread=8.0, median |PWM|=12.9, L-R=+3.1 rpm
+  cmd  +20 rpm: median mean |RPM|=15.7, median spread=3.2, median |PWM|=19.2, L-R=+0.5 rpm
+  cmd  +25 rpm: median mean |RPM|=22.4, median spread=2.6, median |PWM|=23.5, L-R=-0.4 rpm
+  cmd  +30 rpm: median mean |RPM|=35.1, median spread=3.8, median |PWM|=27.9, L-R=+1.5 rpm
+  cmd  +35 rpm: median mean |RPM|=36.3, median spread=4.9, median |PWM|=31.4, L-R=-0.5 rpm
+  cmd  +40 rpm: median mean |RPM|=36.9, median spread=3.3, median |PWM|=34.3, L-R=-0.5 rpm
+  cmd  +45 rpm: median mean |RPM|=49.5, median spread=2.1, median |PWM|=38.0, L-R=-0.3 rpm
+  cmd  +50 rpm: median mean |RPM|=63.6, median spread=1.4, median |PWM|=41.8, L-R=+0.4 rpm
+  cmd  +55 rpm: median mean |RPM|=41.6, median spread=2.4, median |PWM|=39.4, L-R=+0.4 rpm
+  cmd  +60 rpm: median mean |RPM|=74.1, median spread=2.1, median |PWM|=48.5, L-R=+0.6 rpm
+  cmd  +65 rpm: median mean |RPM|=59.7, median spread=2.6, median |PWM|=49.2, L-R=-0.9 rpm
+  cmd  +70 rpm: median mean |RPM|=75.5, median spread=2.5, median |PWM|=54.8, L-R=-1.4 rpm
+  cmd  +75 rpm: median mean |RPM|=69.0, median spread=3.5, median |PWM|=55.7, L-R=-1.9 rpm
+  cmd  +80 rpm: median mean |RPM|=75.7, median spread=2.8, median |PWM|=59.5, L-R=-0.6 rpm
+
+Warning:
+  Median motor speed spread exceeded about 8 rpm for at least one command.
+  Check whether one side pulls or one wheel lags under the same command.
+
+Most useful plots:
+  - 00_overview_vehicle_speed.png
+  - 02_speed_matching_spread.png
+  - 04_pwm_effort_matching.png
+  - 06_left_right_balance.png
+  - 07_phase_scatter_pwm_vs_rpm.png

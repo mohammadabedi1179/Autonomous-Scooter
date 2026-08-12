@@ -1,0 +1,2 @@
+duration_s,final_x_m,final_y_m,final_theta_deg,path_length_m,max_abs_v_mps,max_abs_omega_radps,median_rpm_spread,max_rpm_spread,median_pwm_spread,max_pwm_spread
+76.244,4.5735,-0.801576,-15.067,4.669322,0.242116,0.168071,0.0,15.83,0.0,9.6

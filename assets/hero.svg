@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" width="1200" height="340" role="img" aria-label="Autonomous Scooter — vision-driven reinforcement learning navigation">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"   stop-color="#0b1220"/>
+      <stop offset="55%"  stop-color="#0e1a2b"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#22d3ee"/>
+      <stop offset="50%"  stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#a78bfa"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#22d3ee" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0 L0 0 0 40" fill="none" stroke="#1e3a5f" stroke-width="1" opacity="0.45"/>
+    </pattern>
+    <clipPath id="card"><rect x="0" y="0" width="1200" height="340" rx="18"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#card)">
+    <rect width="1200" height="340" fill="url(#bg)"/>
+    <rect width="1200" height="340" fill="url(#grid)"/>
+
+    <!-- sensor cone -->
+    <path d="M300 214 L620 118 L620 300 Z" fill="url(#glow)" opacity="0.35"/>
+
+    <!-- planned trajectory -->
+    <path id="traj" d="M300 214 C 420 214, 470 150, 560 152 S 720 244, 830 206 S 980 150, 1120 168"
+          fill="none" stroke="url(#accent)" stroke-width="3" stroke-linecap="round"
+          stroke-dasharray="10 12" opacity="0.95">
+      <animate attributeName="stroke-dashoffset" values="220;0" dur="4s" repeatCount="indefinite"/>
+    </path>
+
+    <!-- obstacles -->
+    <g fill="none" stroke="#f472b6" stroke-width="2">
+      <circle cx="560" cy="228" r="16" opacity="0.85">
+        <animate attributeName="r" values="16;25;16" dur="2.6s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.85;0.15;0.85" dur="2.6s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="830" cy="130" r="16" opacity="0.85">
+        <animate attributeName="r" values="16;25;16" dur="2.6s" begin="0.9s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.85;0.15;0.85" dur="2.6s" begin="0.9s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="990" cy="244" r="16" opacity="0.85">
+        <animate attributeName="r" values="16;25;16" dur="2.6s" begin="1.7s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.85;0.15;0.85" dur="2.6s" begin="1.7s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+    <g fill="#f472b6">
+      <circle cx="560" cy="228" r="4"/><circle cx="830" cy="130" r="4"/><circle cx="990" cy="244" r="4"/>
+    </g>
+
+    <!-- goal marker -->
+    <g transform="translate(1120,168)">
+      <circle r="26" fill="none" stroke="#34d399" stroke-width="2" opacity="0.5">
+        <animate attributeName="r" values="20;30;20" dur="3s" repeatCount="indefinite"/>
+      </circle>
+      <circle r="9" fill="#34d399"/>
+    </g>
+
+    <!-- scooter (schematic) -->
+    <g transform="translate(300,214)">
+      <circle r="34" fill="url(#glow)"/>
+      <rect x="-46" y="-16" width="92" height="30" rx="7" fill="#0f172a" stroke="#38bdf8" stroke-width="2"/>
+      <rect x="-14" y="-40" width="10" height="26" rx="3" fill="#0f172a" stroke="#38bdf8" stroke-width="2"/>
+      <rect x="-30" y="-48" width="42" height="9" rx="4" fill="#38bdf8" opacity="0.9"/>
+      <g stroke="#94a3b8" stroke-width="2" fill="#0b1220">
+        <circle cx="-32" cy="20" r="11"/><circle cx="-8" cy="20" r="11"/>
+        <circle cx="16" cy="20" r="11"/><circle cx="38" cy="20" r="11"/>
+      </g>
+      <circle cx="46" cy="-2" r="4" fill="#22d3ee"/>
+      <circle cx="46" cy="6"  r="4" fill="#22d3ee"/>
+    </g>
+
+    <!-- text -->
+    <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
+      <text x="64" y="78" fill="#7dd3fc" font-size="15" letter-spacing="6">LSTM · SAC · STEREO · ROS 2</text>
+      <text x="62" y="140" fill="#f8fafc" font-size="52" font-weight="700" letter-spacing="1">AUTONOMOUS SCOOTER</text>
+      <text x="64" y="176" fill="#94a3b8" font-size="17">Learning to move through crowds — from Gazebo physics to a four-wheel chassis.</text>
+    </g>
+
+    <rect x="0" y="332" width="1200" height="8" fill="url(#accent)"/>
+  </g>
+</svg>

@@ -1,0 +1,85 @@
+==============================================================================
+EPISODE STATS DIAGNOSTIC REPORT
+==============================================================================
+episodes loaded: 171
+early window = episodes [0:34]   late window = episodes [137:171]
+
+------------------------------------------------------------------------------
+1. LAGRANGIAN MULTIPLIER (lambda)  --  is the penalty dominating?
+------------------------------------------------------------------------------
+  observed: min=1.281  max=14.100  final=12.905
+  late-window mean lambda: 11.391
+  fraction of episodes with lambda >= 0.95*cap(50.0): 0.000
+  >> VERDICT: not saturated
+
+------------------------------------------------------------------------------
+2. SHIELD COST (ep_shield_cost)  --  what should the budget be?
+------------------------------------------------------------------------------
+  overall: mean=15.540  median(p50)=7.600
+           p10=0.000  p90=38.400  max=131.500
+  late window: mean=12.488  median=8.050
+  current budget setting: 3.000
+  >> SUGGESTED budget (40-60% of median natural cost): 3.04 .. 4.56
+
+------------------------------------------------------------------------------
+3. OUTCOME MIX & OVER-CONSERVATISM SIGNATURE
+------------------------------------------------------------------------------
+  [overall] goal=0.041  timeout=0.836  collision=0.123
+  [late] goal=0.088  timeout=0.765  collision=0.147
+  rolling success (w=20) final: 0.150   peak: 0.150
+  episode length: mean=465.1  late-mean=410.5
+  typical timeout length (median): 519.0 steps
+  reward: mean=-465.0  late-mean=-357.5  max=75.1
+  >> SIGNATURE: high timeout + low goal + (see severity below) = OVER-CONSERVATISM / loitering.
+
+------------------------------------------------------------------------------
+4. SHIELD INTERVENTIONS & SEVERITY
+------------------------------------------------------------------------------
+  interventions/episode: early-mean=36.5  late-mean=18.2
+  CRITICAL steps/episode: early-mean=1.06  late-mean=0.56  max=26
+  danger/episode:  late-mean=3.41
+  caution/episode: late-mean=14.24
+  intervention fraction (interv/length): mean=0.051  late-mean=0.049
+
+------------------------------------------------------------------------------
+5. CLEARANCE MARGINS (ep_min_obstacle_depth)  --  widening or hugging?
+------------------------------------------------------------------------------
+  early: mean=1.044  p10=0.776
+  late : mean=1.147  p10=0.708
+  >> shift (late-early): 0.103  (widening (good))
+
+------------------------------------------------------------------------------
+6. CURRICULUM PROGRESSION
+------------------------------------------------------------------------------
+  stages seen (stage -> first episode index): 0@0
+  current stage: 0  (Stage 1: 1 static + 4 moving, static goal)
+  >> NEVER ADVANCED past the first stage seen (consistent with the success collapse).
+
+------------------------------------------------------------------------------
+7. LEARNING STABILITY (early vs late)
+------------------------------------------------------------------------------
+  actor loss   : early=25.5831+-10.6739  late=31.8696+-0.7920
+  critic loss  : early=11.8837+-9.7335  late=5.1680+-2.6290
+  entropy coef : early=0.2496+-0.2436  late=0.1215+-0.0016
+  learning rate: early=0.0003+-0.0000  late=0.0003+-0.0000
+
+==============================================================================
+PASTE THIS BACK TO CLAUDE
+==============================================================================
+{
+  "n_episodes": 171,
+  "lambda_final": 12.905,
+  "lambda_frac_at_cap": 0.0,
+  "ep_shield_cost_median": 7.6,
+  "suggested_budget": [
+    3.04,
+    4.56
+  ],
+  "late_goal": 0.088,
+  "late_timeout": 0.765,
+  "late_collision": 0.147,
+  "rolling_success_final": 0.15,
+  "margin_shift_late_minus_early": 0.103,
+  "current_stage": 0,
+  "stages_reached": 1
+}

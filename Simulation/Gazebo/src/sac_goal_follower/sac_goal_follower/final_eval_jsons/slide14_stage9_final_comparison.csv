@@ -1,0 +1,7 @@
+test,filename,kind,model,observation,shield,episodes,success_rate_percent,timeout_rate_percent,collision_rate_percent,other_rate_percent,goal_count,timeout_count,collision_count,other_count,mean_return,mean_length_steps,median_clearance_m,median_ttc_s,shield_rate_percent,total_shield_activations,median_wall_ms,solver_fallback_rate_percent
+1,test01_student_sensor_active_shield.json,RL,Student,Sensor,Active,100,96.000,4.000,0.000,0.000,96,4,0,0,81.855,136.070,0.609,2.555,22.475,4182,141.620,0.000
+2,test02_student_sensor_passive_shield.json,RL,Student,Sensor,Passive,100,81.000,2.000,17.000,0.000,81,2,17,0,53.177,109.620,0.589,2.354,28.257,3708,150.325,0.000
+3,test03_teacher_gt_active_shield.json,RL,Teacher,GT,Active,100,98.000,1.000,1.000,0.000,98,1,1,0,81.585,131.830,0.619,1.900,21.759,3137,135.329,0.000
+4,test04_teacher_sensor_active_shield.json,RL,Teacher,Sensor,Active,100,94.000,1.000,5.000,0.000,94,1,5,0,90.030,97.120,0.746,50.000,13.018,2197,143.480,0.000
+5,test05_mpc_sensor_shield_off.json,MPC,MPC,Sensor,Off,100,30.000,0.000,70.000,0.000,30,0,70,0,-47.224,24.560,0.335,1.254,52.481,754,460.094,0.407
+6,test06_mpc_sensor_shield_on.json,MPC,MPC,Sensor,Active,100,50.000,2.000,48.000,0.000,50,2,48,0,1.553,34.070,0.343,1.386,0.000,0,317.176,0.000

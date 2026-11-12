@@ -1,0 +1,144 @@
+[
+  {
+    "event": "stage_applied",
+    "stage_idx": 0,
+    "stage_name": "Stage 0: goal reaching only (no obstacles)",
+    "total_episodes": 0,
+    "timestamp": 1783026779.2969077
+  },
+  {
+    "event": "stage_advanced",
+    "from_stage": 0,
+    "to_stage": 1,
+    "episodes_in_stage": 110,
+    "total_episodes": 110,
+    "timestamp": 1783111403.5092218
+  },
+  {
+    "event": "stage_applied",
+    "stage_idx": 1,
+    "stage_name": "Stage 1: 2 static, static goal (GT-dominant)",
+    "total_episodes": 110,
+    "timestamp": 1783111404.5136142
+  },
+  {
+    "event": "stage_advanced",
+    "from_stage": 1,
+    "to_stage": 2,
+    "episodes_in_stage": 120,
+    "total_episodes": 230,
+    "timestamp": 1783115789.2214124
+  },
+  {
+    "event": "stage_applied",
+    "stage_idx": 2,
+    "stage_name": "Stage 2: 1 static + 1 moving, static goal (GT-dominant)",
+    "total_episodes": 230,
+    "timestamp": 1783115790.2273254
+  },
+  {
+    "event": "stage_advanced",
+    "from_stage": 2,
+    "to_stage": 3,
+    "episodes_in_stage": 150,
+    "total_episodes": 380,
+    "timestamp": 1783120782.376288
+  },
+  {
+    "event": "stage_applied",
+    "stage_idx": 3,
+    "stage_name": "Stage 3: 2 static + 2 moving, static goal (GT-dominant)",
+    "total_episodes": 380,
+    "timestamp": 1783120783.3814235
+  },
+  {
+    "event": "stage_advanced",
+    "from_stage": 3,
+    "to_stage": 4,
+    "episodes_in_stage": 150,
+    "total_episodes": 530,
+    "timestamp": 1783126076.6780932
+  },
+  {
+    "event": "stage_applied",
+    "stage_idx": 4,
+    "stage_name": "Stage 4: 2 static, perception RAMP (statics)",
+    "total_episodes": 530,
+    "timestamp": 1783126077.6827853
+  },
+  {
+    "event": "stage_advanced",
+    "from_stage": 4,
+    "to_stage": 5,
+    "episodes_in_stage": 180,
+    "total_episodes": 710,
+    "timestamp": 1783132503.3207467
+  },
+  {
+    "event": "stage_applied",
+    "stage_idx": 5,
+    "stage_name": "Stage 5: 2 static + 2 moving, perception RAMP (movers)",
+    "total_episodes": 710,
+    "timestamp": 1783132504.3251967
+  },
+  {
+    "event": "stage_advanced",
+    "from_stage": 5,
+    "to_stage": 6,
+    "episodes_in_stage": 250,
+    "total_episodes": 960,
+    "timestamp": 1783146148.425076
+  },
+  {
+    "event": "stage_applied",
+    "stage_idx": 6,
+    "stage_name": "Stage 6: 2 static + 2 moving, PURE perception (consolidate)",
+    "total_episodes": 960,
+    "timestamp": 1783146149.430638
+  },
+  {
+    "event": "stage_advanced",
+    "from_stage": 6,
+    "to_stage": 7,
+    "episodes_in_stage": 200,
+    "total_episodes": 1160,
+    "timestamp": 1783153121.2557256
+  },
+  {
+    "event": "stage_applied",
+    "stage_idx": 7,
+    "stage_name": "Stage 7: 2 static + 3 moving, slow moving goal (pure perc.)",
+    "total_episodes": 1160,
+    "timestamp": 1783153122.2612054
+  },
+  {
+    "event": "stage_advanced",
+    "from_stage": 7,
+    "to_stage": 8,
+    "episodes_in_stage": 200,
+    "total_episodes": 1360,
+    "timestamp": 1783167859.567851
+  },
+  {
+    "event": "stage_applied",
+    "stage_idx": 8,
+    "stage_name": "Stage 8: 2 static + 4 moving, fast moving goal (pure perc.)",
+    "total_episodes": 1360,
+    "timestamp": 1783167860.6310723
+  },
+  {
+    "event": "stage_advanced",
+    "from_stage": 8,
+    "to_stage": 9,
+    "episodes_in_stage": 250,
+    "total_episodes": 1610,
+    "timestamp": 1783180085.982694
+  },
+  {
+    "event": "stage_applied",
+    "stage_idx": 9,
+    "stage_name": "Stage 9: 3 static + 4 moving, fast moving goal (FINAL)",
+    "total_episodes": 1610,
+    "timestamp": 1783180086.9883556
+  }
+]

@@ -1,0 +1,123 @@
+{
+  "n_episodes": 171,
+  "available_keys": [
+    "actor_loss",
+    "critic_loss",
+    "curriculum_stage",
+    "curriculum_stage_name",
+    "deadlock_escapes_ep",
+    "ent_coef",
+    "ep_critical_steps",
+    "ep_mean_jerk_v",
+    "ep_mean_jerk_w",
+    "ep_mean_ttc",
+    "ep_min_obstacle_depth",
+    "ep_min_ultrasonic_distance",
+    "ep_shield_cost",
+    "episode",
+    "goal_path",
+    "gt_obstacles_path",
+    "learning_rate",
+    "length",
+    "min_dist",
+    "min_obstacle_depth",
+    "min_ultrasonic_distance",
+    "reason",
+    "reward",
+    "robot_path",
+    "seen_obstacles_local",
+    "seen_obstacles_world",
+    "shield_interventions_caution_ep",
+    "shield_interventions_critical_ep",
+    "shield_interventions_danger_ep",
+    "shield_interventions_ep",
+    "shield_lambda",
+    "shield_level",
+    "time",
+    "ttc",
+    "v_cmd",
+    "w_cmd"
+  ],
+  "lambda": {
+    "min": 1.2813999999999997,
+    "max": 14.09973234952539,
+    "final": 12.904546823471776,
+    "late_mean": 11.390888948671115,
+    "frac_at_cap": 0.0,
+    "verdict": "not saturated"
+  },
+  "shield_cost": {
+    "mean": 15.539766081871344,
+    "median": 7.6,
+    "p10": 0.0,
+    "p90": 38.39999999999997,
+    "max": 131.50000000000009,
+    "late_mean": 12.488235294117644,
+    "current_budget": 3.0,
+    "suggested_budget_range": [
+      3.04,
+      4.56
+    ]
+  },
+  "outcomes": {
+    "overall": {
+      "goal": 0.04093567251461988,
+      "timeout": 0.8362573099415205,
+      "collision": 0.12280701754385964
+    },
+    "late": {
+      "goal": 0.08823529411764706,
+      "timeout": 0.7647058823529411,
+      "collision": 0.14705882352941177
+    },
+    "rolling_success_final": 0.15,
+    "rolling_success_peak": 0.15,
+    "reward_late_mean": -357.4583177647059,
+    "reward_max": 75.090239,
+    "length_late_mean": 410.52941176470586,
+    "timeout_length_median": 519.0
+  },
+  "shield": {
+    "interv_early_mean": 36.470588235294116,
+    "interv_late_mean": 18.205882352941178,
+    "critical_late_mean": 0.5588235294117647,
+    "critical_max": 26.0,
+    "danger_late_mean": 3.411764705882353,
+    "caution_late_mean": 14.235294117647058
+  },
+  "margin": {
+    "early_mean": 1.0435232355752413,
+    "late_mean": 1.1466320746523493,
+    "late_p10": 0.7076867297291756,
+    "shift": 0.103108839077108
+  },
+  "curriculum": {
+    "stage_starts": {
+      "0": 0
+    },
+    "current_stage": 0,
+    "current_stage_name": "Stage 1: 1 static + 4 moving, static goal"
+  },
+  "learning": {
+    "actor_loss": {
+      "early_mean": 25.583149706616123,
+      "late_mean": 31.86960165841239,
+      "late_std": 0.7920363165499157
+    },
+    "critic_loss": {
+      "early_mean": 11.883656077525195,
+      "late_mean": 5.168000519275665,
+      "late_std": 2.629026240324914
+    },
+    "ent_coef": {
+      "early_mean": 0.24964126615839846,
+      "late_mean": 0.1214992135230984,
+      "late_std": 0.0016240612006230538
+    },
+    "learning_rate": {
+      "early_mean": 0.00029868977647058817,
+      "late_mean": 0.000292649065212474,
+      "late_std": 3.3502074302891134e-07
+    }
+  }
+}

@@ -1,0 +1,77 @@
+# --- Excluded project sections (entire directory trees) ---
+/Simulation/Khedmat/
+/Motors/
+/Presentation/
+/thesis-gallery/
+/Lidar/
+
+# --- Generated ROS 2 / colcon outputs (any nested workspace) ---
+**/build/
+**/install/
+**/log/
+
+# --- Node / web presentation build outputs ---
+**/node_modules/
+**/dist/
+**/.vite/
+
+# --- Python caches and packaging outputs ---
+**/__pycache__/
+**/*.egg-info/
+**/.pytest_cache/
+**/.mypy_cache/
+*.py[cod]
+
+# --- Compilers, caches, temporary files ---
+CMakeCache.txt
+CMakeFiles/
+*.o
+*.a
+*.so
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# --- LaTeX-generated files (do not ignore source .tex) ---
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+*.toc
+*.out
+*.log
+
+# --- Experimental run logs (archive curated datasets separately) ---
+**/logs/
+Simulation/Gazebo/depth_node_output.txt
+Simulation/Gazebo/TMP_RECORDING.mp4
+Simulation/Gazebo/frames_*.gv
+Simulation/Gazebo/frames_*.pdf
+Simulation/Gazebo/src/stereo_vision_pkg/stereo_vision_pkg/goal_marker_captures/
+Simulation/Gazebo/src/stereo_vision_pkg/stereo_vision_pkg/goal_marker_recordings/
+Simulation/Gazebo/src/stereo_vision_pkg/stereo_vision_pkg/obstacle_recordings/
+
+# --- Captured calibration datasets; keep JSON/YAML calibration parameters ---
+Calibration/**/left_images_calib/
+Calibration/**/right_images_calib/
+Calibration/calibration_data_simulation_*/left-*.png
+Calibration/calibration_data_simulation_*/right-*.png
+Calibration/calibration_data_real_*/depth_experiment_results_screenshots*/meas_*.png
+
+# --- Downloaded model weights (pin versions and use a download script) ---
+*.pt
+*.pth
+
+# --- Redundant archives, vendor installers, backups ---
+*.blend1
+
+# --- Local inventory file ---
+directory_structure.txt
+
+# IMPORTANT: Do NOT globally ignore .glb, .stl, .world, .xacro,
+# .yaml, .json, .onnx, .png, .html, .mp4 or .webm.
+# Some of these are required runtime assets and should be selected manually.

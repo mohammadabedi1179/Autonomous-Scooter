@@ -1,0 +1,91 @@
+=== TRAINING RESULTS REPORT (shareable text) ===
+
+Episodes: 412
+Episode range: 1 .. 412
+
+== Outcome summary ==
+success   :    343 (83.25%)
+collision :     26 (6.31%)
+timeout   :     43 (10.44%)
+other     :      0 (0.00%)
+
+== Succession rate (last 100 episodes) ==
+Succession rate: 94.00%
+
+== Core stats ==
+reward: n=412 | mean=38.9 std=113.9 | min=-448.1 p10=-150.6 p25=50.75 med=90.07 p75=101.5 p90=106.8 max=112.2
+episode_length: n=412 | mean=148.1 steps std=154.6 steps | min=1 steps p10=48 steps p25=58 steps med=80 steps p75=156.2 steps p90=426.3 steps max=739 steps
+episode_time: n=412 | mean=5059 s std=3318 s | min=40.29 s p10=780.1 s p25=1985 s med=5026 s p75=7493 s p90=9879 s max=1.2e+04 s
+actor_loss: n=406 | mean=-13.81 std=5.255 | min=-22.7 p10=-19.88 p25=-18.2 med=-15.65 p75=-9.298 p90=-7.794 max=-1.088
+critic_loss: n=406 | mean=8.551 std=8.496 | min=0.022 p10=2.543 p25=4.59 med=6.772 p75=8.578 p90=13.05 max=57.51
+entropy_coef: n=406 | mean=0.08368 std=0.08506 | min=0.03822 p10=0.04337 p25=0.05464 med=0.07741 p75=0.08126 p90=0.08373 max=0.9687
+min_ultrasonic_distance: n=412 | mean=0.825 m std=0.2379 m | min=0.125 m p10=0.4146 m p25=0.6957 m med=0.9496 m p75=1 m p90=1 m max=1 m
+min_obstacle_depth: n=412 | mean=2.412 m std=1.49 m | min=0.634 m p10=1.03 m p25=1.401 m med=2.143 m p75=2.934 m p90=4.084 m max=10 m
+ttc: n=5 | mean=4.196 s std=1.343 s | min=2.335 s p10=2.763 s p25=3.403 s med=4.151 s p75=4.747 s p90=5.706 s max=6.345 s
+v_cmd: n=412 | mean=0.5321 std=0.5083 | min=-0.9997 p10=-0.2029 p25=0.2926 med=0.7083 p75=0.9473 p90=0.983 max=0.9996
+w_cmd: n=412 | mean=-0.03449 std=0.4639 | min=-1 p10=-0.7214 p25=-0.3157 med=-0.02175 p75=0.2931 p90=0.5119 max=1
+
+== Rolling reward (mean) ==
+rolling100: last=82.215 | best=86.446 | worst=-436.158
+
+== Quick correlations ==
+corr(reward, ttc)        = 0.1748
+corr(reward, v_cmd)      = 0.5017
+corr(reward, w_cmd)      = -0.0208
+corr(reward, min_obs)    = -0.2243
+corr(reward, min_ultra)  = -0.0104
+
+== Top 20 episodes by reward ==
+  ep=267 | R=112.202 | len=42 | time=1581.41s | reason=goal | ttc=nan | v=0.986 | w=-0.053 | min_obs=1.968 | min_ultra=0.828
+  ep=370 | R=111.361 | len=45 | time=6138.86s | reason=goal | ttc=nan | v=0.809 | w=0.303 | min_obs=2.245 | min_ultra=1.000
+  ep=321 | R=110.928 | len=39 | time=4003.41s | reason=goal | ttc=nan | v=0.926 | w=0.267 | min_obs=1.325 | min_ultra=0.949
+  ep=238 | R=110.701 | len=41 | time=352.58s | reason=goal | ttc=nan | v=0.956 | w=0.321 | min_obs=2.213 | min_ultra=1.000
+  ep=232 | R=109.911 | len=49 | time=123.84s | reason=goal | ttc=nan | v=0.936 | w=-0.230 | min_obs=2.500 | min_ultra=0.943
+  ep=148 | R=109.867 | len=44 | time=9751.54s | reason=goal | ttc=nan | v=0.400 | w=-0.166 | min_obs=1.474 | min_ultra=0.631
+  ep=103 | R=109.834 | len=46 | time=7625.98s | reason=goal | ttc=nan | v=0.969 | w=0.513 | min_obs=3.281 | min_ultra=1.000
+  ep=300 | R=109.767 | len=46 | time=3036.93s | reason=goal | ttc=nan | v=0.989 | w=-0.162 | min_obs=1.342 | min_ultra=0.929
+  ep=324 | R=109.664 | len=40 | time=4201.48s | reason=goal | ttc=nan | v=0.976 | w=0.247 | min_obs=1.339 | min_ultra=1.000
+  ep=327 | R=109.615 | len=50 | time=4322.25s | reason=goal | ttc=nan | v=0.952 | w=-0.202 | min_obs=2.411 | min_ultra=1.000
+  ep=228 | R=109.394 | len=43 | time=1514.80s | reason=goal | ttc=nan | v=0.993 | w=-0.160 | min_obs=3.699 | min_ultra=0.942
+  ep=304 | R=109.325 | len=42 | time=3196.13s | reason=goal | ttc=nan | v=0.931 | w=-0.189 | min_obs=3.464 | min_ultra=1.000
+  ep=270 | R=109.228 | len=44 | time=1692.78s | reason=goal | ttc=nan | v=0.784 | w=-0.088 | min_obs=2.863 | min_ultra=0.777
+  ep=72 | R=109.003 | len=47 | time=5839.86s | reason=goal | ttc=nan | v=0.991 | w=0.310 | min_obs=2.338 | min_ultra=1.000
+  ep=318 | R=108.919 | len=42 | time=3839.88s | reason=goal | ttc=nan | v=0.977 | w=0.152 | min_obs=2.630 | min_ultra=0.932
+  ep=294 | R=108.900 | len=44 | time=2787.81s | reason=goal | ttc=nan | v=0.967 | w=-0.519 | min_obs=2.969 | min_ultra=1.000
+  ep=371 | R=108.893 | len=56 | time=6191.24s | reason=goal | ttc=nan | v=0.958 | w=-0.082 | min_obs=2.900 | min_ultra=0.753
+  ep=201 | R=108.706 | len=49 | time=430.89s | reason=goal | ttc=nan | v=0.922 | w=0.198 | min_obs=1.596 | min_ultra=0.838
+  ep=275 | R=108.606 | len=54 | time=1923.70s | reason=goal | ttc=nan | v=0.999 | w=0.951 | min_obs=2.846 | min_ultra=0.954
+  ep=88 | R=108.503 | len=43 | time=6778.79s | reason=goal | ttc=nan | v=0.957 | w=0.394 | min_obs=2.396 | min_ultra=0.985
+
+== Worst 20 episodes by reward ==
+  ep=5 | R=-448.122 | len=737 | time=564.68s | reason=timeout | ttc=nan | v=-0.612 | w=0.247 | min_obs=3.452 | min_ultra=1.000
+  ep=3 | R=-436.744 | len=738 | time=349.63s | reason=timeout | ttc=nan | v=0.522 | w=-0.120 | min_obs=2.923 | min_ultra=1.000
+  ep=2 | R=-434.903 | len=738 | time=238.85s | reason=timeout | ttc=nan | v=0.082 | w=-0.546 | min_obs=1.878 | min_ultra=1.000
+  ep=6 | R=-433.839 | len=736 | time=671.86s | reason=timeout | ttc=nan | v=-0.067 | w=0.401 | min_obs=3.324 | min_ultra=1.000
+  ep=1 | R=-432.903 | len=737 | time=129.83s | reason=timeout | ttc=nan | v=-0.889 | w=0.335 | min_obs=2.142 | min_ultra=1.000
+  ep=4 | R=-428.117 | len=739 | time=455.88s | reason=timeout | ttc=nan | v=-0.280 | w=0.052 | min_obs=1.977 | min_ultra=1.000
+  ep=7 | R=-394.152 | len=683 | time=782.51s | reason=timeout | ttc=nan | v=0.419 | w=0.248 | min_obs=1.201 | min_ultra=1.000
+  ep=9 | R=-282.335 | len=511 | time=1001.15s | reason=timeout | ttc=nan | v=0.614 | w=-0.330 | min_obs=1.840 | min_ultra=1.000
+  ep=8 | R=-279.189 | len=515 | time=887.43s | reason=timeout | ttc=nan | v=-0.150 | w=0.800 | min_obs=1.105 | min_ultra=1.000
+  ep=11 | R=-273.266 | len=505 | time=1224.62s | reason=timeout | ttc=nan | v=-0.619 | w=0.399 | min_obs=1.730 | min_ultra=1.000
+  ep=12 | R=-264.186 | len=528 | time=1342.40s | reason=timeout | ttc=nan | v=0.583 | w=-0.734 | min_obs=10.000 | min_ultra=1.000
+  ep=10 | R=-256.239 | len=483 | time=1114.13s | reason=timeout | ttc=nan | v=0.676 | w=-0.417 | min_obs=3.543 | min_ultra=1.000
+  ep=38 | R=-252.522 | len=532 | time=3615.05s | reason=timeout | ttc=nan | v=0.400 | w=-0.747 | min_obs=3.093 | min_ultra=0.287
+  ep=123 | R=-240.552 | len=499 | time=8638.23s | reason=timeout | ttc=nan | v=-0.836 | w=-0.172 | min_obs=10.000 | min_ultra=1.000
+  ep=15 | R=-236.973 | len=529 | time=1628.73s | reason=timeout | ttc=nan | v=0.508 | w=0.091 | min_obs=2.237 | min_ultra=1.000
+  ep=52 | R=-236.322 | len=537 | time=4740.65s | reason=timeout | ttc=nan | v=0.052 | w=0.680 | min_obs=3.035 | min_ultra=1.000
+  ep=27 | R=-235.193 | len=533 | time=2602.12s | reason=timeout | ttc=nan | v=0.731 | w=0.188 | min_obs=4.795 | min_ultra=1.000
+  ep=28 | R=-226.263 | len=533 | time=2707.89s | reason=timeout | ttc=nan | v=0.474 | w=0.475 | min_obs=5.696 | min_ultra=1.000
+  ep=14 | R=-224.545 | len=528 | time=1520.41s | reason=timeout | ttc=nan | v=0.100 | w=-1.000 | min_obs=1.474 | min_ultra=1.000
+  ep=42 | R=-219.060 | len=534 | time=3992.50s | reason=timeout | ttc=nan | v=0.291 | w=-0.932 | min_obs=4.955 | min_ultra=1.000
+
+== Downsampled per-episode series (every 50) ==
+ep=1 | R=-432.903 | len=737 | time=129.83s | reason=timeout | ttc=nan | v=-0.889 | w=0.335 | min_obs=2.142 | min_ultra=1.000
+ep=51 | R=-158.300 | len=420 | time=4635.76s | reason=timeout | ttc=nan | v=-0.654 | w=0.014 | min_obs=1.109 | min_ultra=1.000
+ep=101 | R=-122.004 | len=155 | time=7554.85s | reason=collision | ttc=nan | v=-0.150 | w=0.800 | min_obs=1.094 | min_ultra=0.170
+ep=151 | R=90.130 | len=86 | time=9884.37s | reason=goal | ttc=nan | v=0.966 | w=-0.377 | min_obs=3.100 | min_ultra=1.000
+ep=201 | R=108.706 | len=49 | time=430.89s | reason=goal | ttc=nan | v=0.922 | w=0.198 | min_obs=1.596 | min_ultra=0.838
+ep=251 | R=94.539 | len=72 | time=930.47s | reason=goal | ttc=nan | v=-0.251 | w=-0.994 | min_obs=2.058 | min_ultra=0.609
+ep=301 | R=94.464 | len=80 | time=3094.25s | reason=goal | ttc=nan | v=0.346 | w=0.284 | min_obs=2.206 | min_ultra=0.474
+ep=351 | R=102.886 | len=51 | time=5354.48s | reason=goal | ttc=nan | v=0.996 | w=-0.031 | min_obs=2.180 | min_ultra=1.000
+ep=401 | R=44.863 | len=194 | time=7477.89s | reason=goal | ttc=nan | v=0.288 | w=0.006 | min_obs=1.084 | min_ultra=0.902

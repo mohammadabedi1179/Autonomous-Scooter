@@ -1,2 +1,0 @@
-duration_s,final_x_m,final_y_m,final_theta_deg,path_length_m,max_abs_v_corrected_mps,max_abs_v_hall_raw_mps,max_abs_omega_radps,median_slip_k,min_slip_k,median_fr_slip_ratio_left,median_fr_slip_ratio_right,max_fr_slip_ratio_left,max_fr_slip_ratio_right,pct_time_using_imu,median_rpm_spread,max_rpm_spread
-19.739,0.023148,-0.003869,-167.2,0.068473,0.100571,0.389933,53.667373,0.0612,0.0,0.5731,0.2794,1.0,1.0,99.74683544303798,1.5699999999999985,117.67
